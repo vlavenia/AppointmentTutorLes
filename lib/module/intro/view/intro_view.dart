@@ -104,7 +104,7 @@ class IntroView extends StatefulWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
-                      "Let's Start",
+                      "Let's Start :)",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 17,
