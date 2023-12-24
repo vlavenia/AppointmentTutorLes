@@ -98,7 +98,7 @@ class OnboardingScreenView extends StatefulWidget {
                                                 const EdgeInsets.only(top: 364),
                                             child: Center(
                                               child: Image.asset(
-                                                'assets/icon/Logo.png',
+                                                'assets/icon/Logowhite.png',
                                                 width: 113,
                                                 height: 25,
                                               ),

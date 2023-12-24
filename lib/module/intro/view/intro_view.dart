@@ -51,7 +51,7 @@ class IntroView extends StatefulWidget {
               ),
             ),
             const SizedBox(
-              height: 460.0,
+              height: 390.0,
             ),
             const Text(
               'Hello and\n Wellcome here!',

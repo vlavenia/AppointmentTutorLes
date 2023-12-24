@@ -8,15 +8,11 @@ class ForgotPasswordView extends StatefulWidget {
   Widget build(context, ForgotPasswordController controller) {
     controller.view = this;
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("ForgotPassword"),
-        actions: const [],
-      ),
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: const [],
+          child: const Column(
+            children: [],
           ),
         ),
       ),
