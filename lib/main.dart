@@ -1,5 +1,6 @@
-import 'package:privatedu/core.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:privatedu/module/splash/view/splash_view.dart';
 
 void main() {
   runApp(const MyApp());

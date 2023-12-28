@@ -6,7 +6,9 @@
         "register",
         "change_password",
         "forgot_password",
-        "onboarding_screen"
+        "onboarding_screen",
+        "forgot_pasword_auth",
+        "dashboard"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,

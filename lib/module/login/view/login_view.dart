@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:privatedu/components/my_textfield.dart';
 import 'package:privatedu/core.dart';
-import 'package:privatedu/utils/globalcolor.dart';
 import '../controller/login_controller.dart';
 
 class LoginView extends StatefulWidget {
@@ -17,14 +16,14 @@ class LoginView extends StatefulWidget {
           child: Column(
             children: [
               const Padding(
-                padding: EdgeInsets.only(top: 30),
+                padding: EdgeInsets.only(top: 60),
                 child: Text(
                   "Sign In",
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700),
                 ),
               ),
               const SizedBox(
-                height: 45.0,
+                height: 25.0,
               ),
               const MyTextField(),
               SizedBox(
@@ -58,7 +57,30 @@ class LoginView extends StatefulWidget {
                       padding: const EdgeInsets.only(left: 20),
                       width: 385,
                       child: ElevatedButton(
-                          onPressed: () {}, child: const Text("Sign in")),
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  Colors.lightBlue),
+                              shape: MaterialStateProperty.all(
+                                  RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18.0),
+                              ))),
+                          onPressed: () {
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const DashboardView()),
+                            );
+                          },
+                          child: const Padding(
+                            padding: EdgeInsets.all(18),
+                            child: Text(
+                              "Sign in",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 18),
+                            ),
+                          )),
                     )
                   ],
                 ),
@@ -70,13 +92,33 @@ class LoginView extends StatefulWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text("Don't have an account?"),
-                  TextButton(onPressed: () {}, child: const Text("Sign Up"))
+                  TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const RegisterView()),
+                        );
+                      },
+                      child: const Text("Sign Up"))
                 ],
               ),
               const SizedBox(
                 height: 20.0,
               ),
-              const Text("OR"),
+              Row(
+                children: [
+                  Expanded(
+                      child: Container(
+                          margin: const EdgeInsets.only(left: 50, right: 20),
+                          child: const Divider())),
+                  const Text("OR"),
+                  Expanded(
+                      child: Container(
+                          margin: const EdgeInsets.only(left: 20, right: 50),
+                          child: const Divider())),
+                ],
+              ),
               const SizedBox(
                 height: 30.0,
               ),
